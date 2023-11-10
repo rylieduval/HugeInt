@@ -213,4 +213,19 @@ public class HugeInt {
         list.set(i, list.get(j));
         list.set(j, temp);
     }
+
+    @Override 
+    public String toString()
+    {
+	String output = "";
+	output += this.sign;
+	myNode myFirstNode = this.head;
+	while(myFirstNode != null)
+	{
+		output += myFirstNode.Data;
+		myFirstNode = myFirstNode.NextNode;
+	}
+	
+	return output;
+    }
 }
